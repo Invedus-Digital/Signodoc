@@ -12,13 +12,17 @@ import Testimonials from './components/Testimonials/index';
 import Articles from './components/Articles/index';
 import Joinus from './components/Joinus/index';
 import Insta from './components/Insta/index';
-
-
-export default function Home() {
+import Integration from './components/Integration/Integration'
+import Video from "./components/Video/video"
+import Companies from "./components/companies/index"
+ export default function Home() {
   return (
     <main>
       <Banner />
+      <Companies/>
+      <Video/>
       <Aboutus />
+      <Integration/>
       <Dedicated />
       <Digital />
       <Beliefs />

@@ -1,37 +1,55 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Banner = () => {
     return (
-        <div className='mx-auto max-w-7xl my-10 sm:py-10 px-6 lg:px-8'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 my-16'>
+        <div className="mx-auto max-w-7xl my-16 sm:py-16 px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                
+                {/* COLUMN-1: Text Section */}
+                <motion.div 
+                    className="z-10 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4"
+                    initial={{ opacity: 0, x: -50 }} 
+                    animate={{ opacity: 1, x: 0 }} 
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    <motion.button
+                        className="text-blue bg-lightblue hover:shadow-xl text-sm md:text-lg font-bold px-6 py-2 rounded-3xl tracking-wider hover:text-white hover:bg-black"
+                        initial={{ scale: 0.8 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        whileHover={{ scale: 1.1 }}
+                    >
+                        Secure & Fast
+                    </motion.button>
 
-                {/* COLUMN-1 */}
+                    <motion.h1 
+                        className="py-3 text-4xl md:text-5xl lg:text-6xl font-bold text-darkpurple leading-tight"
+                        initial={{ opacity: 0, y: 50 }} 
+                        animate={{ opacity: 1, y: 0 }} 
+                        transition={{ duration: 1, ease: "easeOut" }}
+                    >
+                        Sign Documents <br /> Effortlessly & Securely
+                    </motion.h1>
 
-                <div className="mx-auto sm:mx-0">
-                    <div className='py-3 text-center lg:text-start'>
-                        <button className='text-blue bg-lightblue hover:shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider hover:text-white hover:bg-black'>Let See...</button>
-                    </div>
-                    <div className="py-3 text-center lg:text-start">
-                        <h1 className='text-6xl lg:text-80xl font-bold text-darkpurple'>
-                            Dedicated to <br /> bring your <br /> ideas to life.
-                        </h1>
-                    </div>
-                    <div className='my-7 text-center lg:text-start'>
-                        <button className='text-sm md:text-xl font-semibold hover:shadow-xl bg-blue text-white py-3 px-6 md:py-5 md:px-14 rounded-full hover:bg-hoblue'>
-                            Get Start
-                        </button>
-                    </div>
-                </div>
+                    <motion.button
+                        className="text-sm md:text-xl mt-5 font-semibold hover:shadow-xl bg-blue text-white py-3 px-6 md:py-5 md:px-14 rounded-full hover:bg-hoblue"
+                        initial={{ scale: 0.8 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
+                        whileHover={{ scale: 1.1 }}
+                    >
+                        Get Started
+                    </motion.button>
+                </motion.div>
 
-                {/* COLUMN-2 */}
-
-                <div className='lg:-m-24 lg:pt-20 hidden lg:block'>
-                    <Image src="/images/banner/banner.svg" alt="hero-image" width={800} height={642} />
-                </div>
+                {/* COLUMN-2: Image Section */}
+                <motion.div                      className="lg:-m-24 lg:pt-20 hidden lg:block"                     initial={{ opacity: 0, x: 50 }}                      animate={{ opacity: 1, x: 0 }}                      transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}                 >                     <Image                          src="/images/banner/banner2.webp"                          alt="hero-image"                          width={800}                          height={642}                          className="rounded-lg shadow-xl"                     />                 </motion.div>
 
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Banner;
