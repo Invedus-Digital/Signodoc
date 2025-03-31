@@ -3,6 +3,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Banner = () => {
+
+    const handleButtonClick = () => {
+        window.open("https://sign-invedus.vercel.app/", "_blank");
+      };
+    
     return (
         <div className="mx-auto max-w-7xl my-16 sm:py-16 px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -34,14 +39,17 @@ const Banner = () => {
                     </motion.h1>
 
                     <motion.button
-                        className="text-sm md:text-xl mt-5 font-semibold hover:shadow-xl bg-blue text-white py-3 px-6 md:py-5 md:px-14 rounded-full hover:bg-hoblue"
-                        initial={{ scale: 0.8 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
-                        whileHover={{ scale: 1.1 }}
-                    >
-                        Get Started
-                    </motion.button>
+      className="text-sm md:text-xl mt-5 font-semibold hover:shadow-xl bg-blue text-white py-3 px-6 md:py-5 md:px-14 rounded-full hover:bg-hoblue"
+      initial={{ scale: 0.8 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
+      whileHover={{ scale: 1.1 }}
+      onClick={handleButtonClick} // Use the function directly
+    >
+      Get Started
+    </motion.button>
+
+
                 </motion.div>
 
                 {/* COLUMN-2: Image Section */}
