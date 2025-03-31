@@ -36,7 +36,7 @@ const Beliefs = () => {
                   we relentlessly prioritize the protection of your digital assets.
                 </p>
                 <div className="flex justify-start mt-6">
-                  <button className="bg-indigo hover:bg-indigo-500 shadow-md hover:shadow-lg text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-110">
+                  <button className="bg-blue hover:bg-indigo-500 shadow-md hover:shadow-lg text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-110">
                     Explore Security Practices
                   </button>
                 </div>
@@ -54,7 +54,7 @@ const Beliefs = () => {
                     Innovation & Efficiency
                   </h3>
                 </div>
-                <p className="text-blue text-lg mb-8">
+                <p className="text-black  text-lg mb-8">
                   We champion innovation as the engine of progress. By integrating
                   cutting-edge technologies and forward-thinking strategies, we
                   deliver solutions that not only streamline your workflows but also
