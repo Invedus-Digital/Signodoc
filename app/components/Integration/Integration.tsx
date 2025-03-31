@@ -19,16 +19,15 @@ const collabApps = [
 const floatingVariants = {
   initial: { y: 0 },
   animate: {
-    y: [-5, 5, -5], // Subtle floating up & down
+    y: [-5, 5, -5],
     transition: {
       duration: 3,
       repeat: Infinity,
-      repeatType: "reverse",
+      repeatType: "reverse" as "reverse", // Explicitly type it
       ease: "easeInOut",
     },
   },
 };
-
 // Tilt effect on hover
 const hoverEffect = {
   whileHover: {
